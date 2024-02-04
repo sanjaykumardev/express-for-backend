@@ -26,7 +26,7 @@ const Register = () => {
           username,
           email,
           password,
-          usertype,
+          
         });
         console.log('Username:', username);
         console.log('Email:', email);
@@ -61,24 +61,7 @@ const Register = () => {
               className='mt-2 mb-2 '
               onChange={(e) => setUsertype(e.target.value)}
             /> User
-            <input
-              className='mt-7 mb-5 ml-10'
-              type="radio"
-              name='usertype'
-              value='Admin'
-              onChange={(e) => setUsertype(e.target.value)}
-            /> Admin
-
-            {usertype === "Admin" ? (<div>
-              <h3 className='font-semibold'>Secretkey</h3>
-              <input
-                type="text"
-                value={Secretkey}
-                className='border-2 border-black p-2  mb-5 md:w-full w-full rounded-lg z-index-2 '
-                placeholder="key"
-                onChange={(e) => useSecretkey(e.target.value)}
-              />
-            </div>) : null}
+          
 
             <div>
               <h3 className='font-semibold'>Username</h3>
