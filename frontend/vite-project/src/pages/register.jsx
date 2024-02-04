@@ -15,6 +15,7 @@ const Register = () => {
 
   async function RegisterSubmit(e) {
     if (usertype === 'Admin' && Secretkey !== 'sanjay') {
+      navigator('/Adminpage');
       e.preventDefault();
       alert('Invalid Admin');
     } else {
