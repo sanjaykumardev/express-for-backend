@@ -125,7 +125,7 @@ const homepages = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-[90vh] h-[95vh] bg-blue-500  w-full md:mt-10">
+        <div className="md:h-[90vh] h-[130vh] bg-blue-500  w-full md:mt-10">
           <div className="mt-10">
             <h3 className="text-center md:text-4xl text-lg text-white font-semi-bold p-10 w-70 bg-gray-800">SPECILIZED DOCTORS AND FUTURESTIC EQUPIMENT</h3>
           </div>
@@ -135,9 +135,9 @@ const homepages = () => {
             <div>
               <img className="  md:h-[69vh] md:ml-40 p-2 mb-3 md:mb-10 mr-5 shadow-lg  md:mr-28 mt-5 object-fit " src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
             </div>
-            <div className="md:w-1/4 w-20px h-[40vh] ml-0  shadow-lg md:h-[67vh] md:mt-8   mr-0 bg-white ">
-              <h1 className="text-lg font-bold text-center mb-4 mt-2">MEDICAL EQUPIMENT</h1>
-              <div className="p-5">
+            <div className="md:w-1/4 w-20px h-[70vh] ml-0  shadow-lg md:h-[72vh] md:mt-8    bg-white ">
+              <h1 className="text-lg font-bold text-center  mt-2">MEDICAL EQUPIMENT</h1>
+              <div className="p-3 text-sm space-y-2">
                 <li>
                   Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
                 </li>
@@ -156,7 +156,13 @@ const homepages = () => {
                 <li>
                   Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
                 </li>
-                <button className="bg-blue-500 text-lg  rounded shadow-lg font-bold md:bg-blue-500 md:p-5 mt-10 md:ml-6 md:px-40  ">
+                <li>
+                  Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+                </li>
+                <li>
+                  Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+                </li>
+                <button className="bg-black text-lg ml-28 text-white rounded shadow-lg font-bold md:bg-blue-500 p-5 px-20 md:p-5 md:ml-6 md:px-40  ">
                   See List
                 </button>
               </div>
