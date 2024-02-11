@@ -1,26 +1,25 @@
-const  mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-const Userdata =  mongoose.Schema({
-  username:{
-    type:String,
-    required:[true , "enter the data "]
+const Userdata = mongoose.Schema({
+  username: {
+    type: String,
+    required: [true, "Enter the username"]
   },
-  email:{
-    type:String,
-    required:[true , "enter the email"],
-    unique :[true, "email is already their"]
+  email: {
+    type: String,
+    required: [true, "Enter the email"],
+    unique: [true, "Email is already taken"]
   },
-  password:{
-    type:String,
-    required:[true,"password is required"]
+  password: {
+    type: String,
+    required: [true, "Password is required"]
   },
-  usertype:{
-    type:String,
-    required: true,
-  },
-},{
-  timestampe: true,
-}
-);
+  usertype: {
+    type: String,
+    required: true
+  }
+}, {
+  timestamps: true // Corrected from 'timestampe' to 'timestamps'
+});
 
-module.exports = mongoose.model("user" ,Userdata);
+module.exports = mongoose.model("User", Userdata);

@@ -1,34 +1,28 @@
-import { Link } from 'react-router-dom'
-// import { BsSearch } from 'react-icons/bs'
-// import {FaBars} from 'react-icons/fa'
-import {  useState } from 'react'
-// import Menu from './Menu'
-// import { UserContext } from '../context/UserContext'
-
+import React, { useState } from 'react';
+import { Link, useNavigate} from 'react-router-dom';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') !== null);
+ const navigator = useNavigate(); 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    console.log(isLoggedIn);
+    setIsLoggedIn(false);
+    navigator('/');
   };
 
-
   return (
-    <>
-   <nav className="bg-gray-800 p-4 shadow-lg ">
+    <nav className="bg-gray-800 p-4 shadow-lg">
       <div className="container mx-auto md:mt-2 md:mb-2 flex justify-between items-center">
-        {/* Logo or Brand */}
-        <Link to="/" className="text-white text-xl font-bold">
-       COVID-19
+        <Link to="/" className="text-white text-3xl font-bold">
+          COVID-19
         </Link>
 
-        {/* Navigation Links */}
         <div className="hidden md:flex space-x-12 ml-20">
           <Link to="/" className="text-white">
             Home
           </Link>
-          <Link to="/about" className="text-white ">
+          <Link to="/about" className="text-white">
             About
           </Link>
           <Link to="/services" className="text-white">
@@ -39,32 +33,33 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Auth Links */}
         <div className="flex space-x-4">
-          <Link to="/login" >
-          <button className="bg-blue-500 shadow-lg shadow-blue-500/50 text-white px-4 py-2 rounded"> 
-            Login
-            </button>
-          </Link>
-          <Link to="/register">
-          <button className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white px-4 py-2 rounded ">
-              Register
-            </button>
-          </Link>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className="bg-red-500 shadow-lg shadow-red-500/50 text-white px-4 py-2 rounded">
+              Logout
+           <Link to='/'></Link> </button>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className="bg-blue-500 shadow-lg shadow-blue-500/50 text-white px-4 py-2 rounded">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white px-4 py-2 rounded">
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
         </div>
 
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white">
-            {isOpen ? 'Close' : 'Menu'}
-          </button>
+          {/* Mobile menu toggle button */}
         </div>
-      
       </div>
-     
     </nav>
-    
-    </>
   );
 };
 
-export default Navbar
+export default Navbar;

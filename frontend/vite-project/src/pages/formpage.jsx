@@ -3,14 +3,14 @@ import Axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer';
 import {Link} from "react-router-dom"
-
+import Navbar2 from "../components/Navbar2"
 
 const formPage = () => {
 
-  const navigate = useNavigate(); 
+  // const navigate = useNavigate(); 
 
-  const [authToken, setAuthToken] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  // const [authToken, setAuthToken] = useState('');
+  // const [isAuthenticated, setIsAuthenticated] = useState(true);
   const isProductAvailable = true;
   const [error , setError] = useState(false);
   const [name, setName] = useState('');
@@ -24,39 +24,39 @@ const formPage = () => {
   const [time, setTime] = useState('12:00');
   const [slot, setSlot] = useState('2022-01-17');
 
-  useEffect(() => {
-    // Load authentication token from local storage or any other source
-    const storedToken = localStorage.getItem('token');
-    if (storedToken) {
-      setAuthToken(storedToken);
-      setIsAuthenticated(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Load authentication token from local storage or any other source
+  //   const storedToken = localStorage.getItem('token');
+  //   if (storedToken) {
+  //     setAuthToken(storedToken);
+  //     setIsAuthenticated(true);
+  //   }
+  // }, []);
 
 
 
  
-  const logout = async () => {
-    try {
-      const res = await Axios.delete("http://localhost:3000/api/users/logout", {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
+  // const logout = async () => {
+  //   try {
+  //     const res = await Axios.delete("http://localhost:3000/api/users/logout", {
+  //       headers: {
+  //         Authorization: `Bearer ${authToken}`,
+  //       },
+  //     });
 
-      if (res.status === 200) {
-        console.log('Logout successful');
-        setIsAuthenticated(false);
-        setAuthToken('');
-        localStorage.removeItem('token'); // Remove token from local storage
-        navigate('/login');
-      } else {
-        console.log('Logout failed');
-      }
-    } catch (error) {
-      console.error('Error during logout:', error);
-    }
-  };
+  //     if (res.status === 200) {
+  //       console.log('Logout successful');
+  //       setIsAuthenticated(false);
+  //       setAuthToken('');
+  //       localStorage.removeItem('token'); // Remove token from local storage
+  //       navigate('/login');
+  //     } else {
+  //       console.log('Logout failed');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error during logout:', error);
+  //   }
+  // };
 
   // COVID-19 details
   const handleFormSubmit = async (e) => {
@@ -90,32 +90,14 @@ const formPage = () => {
       setError(true)
       console.log(err)
     }
-   
-  
   };
 
   return (
    
-  
+     
 
     <div className="">
-      
-      <div  className="bg-gray-800 p-4 shadow- ">
-      <div className="container mx-auto flex justify-between items-center" >
-        {/* Logo or Brand */}
-        <Link to="/" className="text-white text-xl font-bold">
-          COVID-19
-        </Link>
-        <div>
-          {isAuthenticated ? (
-            <button className="bg-indigo-500 shadow-lg md:w-80% p-3 w-30 shadow-indigo-500/50 text-white px-4 py-2 rounded " onClick={logout}>Logout</button>
-          ) : (
-            <p>user is exits</p>
-          )}
-        </div>
-    </div>
-      </div>
-     
+      <Navbar2/>
  {/* Personal information */}
       <div>
       <h2 className="p-1 text-center z-index shadow-black bg-blue-100 text-s md:text-lg text-black-200">  Need help finding a COVID‑19 vaccine in the U.S.? Call <span className="text-blue-500">1-800-232-0233 (TTY 1-888-720-7489)</span></h2>
