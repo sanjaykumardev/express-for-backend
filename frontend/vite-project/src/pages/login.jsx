@@ -31,8 +31,6 @@ function login() {
       setToken(newToken);
       localStorage.setItem('token', newToken);
       console.log('Axios Error:', res);
-
-
       setEmail(" ");
       setPassword(" ");
 
