@@ -63,7 +63,7 @@ function login() {
       <div className='w-full flex justify-center items-center  h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[80%] md:w-[25%] '>
           <div className='md:mr-20'>
-            <h1 className=" font-bold md:ml-20 mt-7 md:mb-7 text-center md:text-2xl gap-3">Login To Your Account</h1>
+            <h1 className=" font-bold md:ml-20 mt-7 mb-2 md:mb-7 text-2xl text-center md:text-2xl gap-3">Login To Your Account</h1>
             <form className=' ml-5 md:mr-5' onSubmit={(e) => handleSubmit(e)}>
 
 
