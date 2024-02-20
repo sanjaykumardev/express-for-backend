@@ -22,8 +22,6 @@ function login() {
 
   const [token, setToken] = useState(localStorage.getItem('token'));
   const handleSubmit = async (e) => {
-
-
     e.preventDefault();
     console.log("good", e);
     try {
