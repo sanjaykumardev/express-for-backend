@@ -1,6 +1,6 @@
 import Footer from "../components/Footer"
 import Navbar2 from "../components/Navbar2"
-import React from 'react'
+// import React from 'react'
 import { Link } from 'react-router-dom'
 // import { IoCallSharp } from "react-icons/io5";
 
@@ -43,8 +43,8 @@ const homepages = () => {
 
             </p>
             <li className=" text-2xl mb-2" >  If you have insurance, check with your selected location or your insurer to confirm that COVID-19 vaccine is covered, and the location is in network.</li>
-            <li className=" text-2xl mb-2">  If you have health insurance but it doesn't fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.</li>
-            <li className=" text-2xl"> If you don't have health insurance, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program.
+            <li className=" text-2xl mb-2">  If you have health insurance but it  fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.</li>
+            <li className=" text-2xl"> If you have health insurance, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program.
             </li>
 
 

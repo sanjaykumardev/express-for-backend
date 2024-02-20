@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from "axios"
 import { useNavigate } from 'react-router-dom';
-import { URL } from '../url'
+// import { URL } from '../url'
 import Navbar2 from "../components/Navbar2"
 import Footer from '../components/Footer'
 // import { validEmail, validPassword } from '../components/validation';
@@ -44,8 +45,7 @@ function login() {
 
 
     } catch (error) {
-      setError(true)
-        +
+      setError(true);
         console.error('Login failed:', error);
     }
 
