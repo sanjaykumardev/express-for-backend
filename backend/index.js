@@ -12,7 +12,7 @@ dotenv.config();
 // port config to the server 
 const port = process.env.PORT || 5001 ;
 app.use(express.json()); // to pass the data to form client to server we need to use this 
-app.use(cors({origin:["http://localhost:5173"]}));
+app.use(cors({origin:["http://localhost:5174"]}));
 // middleware for connect the client and server
 
 app.use(errorHandler);

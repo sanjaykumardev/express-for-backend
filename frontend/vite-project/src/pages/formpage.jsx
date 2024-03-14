@@ -24,14 +24,7 @@ const formPage = () => {
   const [time, setTime] = useState('12:00');
   const [slot, setSlot] = useState('2022-01-17');
 
-  // useEffect(() => {
-  //   // Load authentication token from local storage or any other source
-  //   const storedToken = localStorage.getItem('token');
-  //   if (storedToken) {
-  //     setAuthToken(storedToken);
-  //     setIsAuthenticated(true);
-  //   }
-  // }, []);
+
 
 
 

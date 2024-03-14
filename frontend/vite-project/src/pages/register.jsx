@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
@@ -22,7 +24,7 @@ const Register = () => {
       e.preventDefault();
       console.log(e);
       try {
-        const res = await Axios.post("http://localhost:3000/api/users/register", {
+        const res = await Axios.post("http://localhost:5000/api/users/register", {
           username,
           email,
           password,

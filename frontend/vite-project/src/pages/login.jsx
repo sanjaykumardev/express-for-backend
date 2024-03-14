@@ -1,12 +1,11 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from "axios"
 import { useNavigate } from 'react-router-dom';
-// import { URL } from '../url'
 import Navbar2 from "../components/Navbar2"
 import Footer from '../components/Footer'
-// import { validEmail, validPassword } from '../components/validation';
 
 
 
@@ -15,8 +14,6 @@ function login() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
   const [error, setError] = useState(false)
-  // const [emailErr, setEmailErr] = useState(false);
-  // const [pwdError, setPwdError] = useState(false);
   const navigator = useNavigate()
 
 
@@ -25,29 +22,21 @@ function login() {
     e.preventDefault();
     console.log("good", e);
     try {
-      const res = await Axios.post("http://localhost:3000/api/users/login", { email, password, })
+      const res = await Axios.post("http://localhost:5000/api/users/login", { email, password, })
       const newToken = res.data.accesstoken;
       setToken(newToken);
       localStorage.setItem('token', newToken);
       console.log('Axios Error:', res);
       setEmail(" ");
       setPassword(" ");
-
       setEmail(res.data.email)
       setPassword(res.data.password)
       setError(false)
-      // setEmailErr(false)
-      navigator("/")
-
-
-
-
+      navigator("/");
     } catch (error) {
       setError(true);
         console.error('Login failed:', error);
     }
-
-
   }
 
 
@@ -99,6 +88,6 @@ function login() {
       <Footer />
     </>
   );
-};
+}
 
 export default login;
