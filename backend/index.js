@@ -6,7 +6,10 @@ const usercontact = require('./routes/contact');
 const Userscontact = require("./routes/user");
 const connectDB = require("./config/dbConnection");
 const cors  = require("cors")
+const dns = require('dns');
+const punycode = require('punycode');
 dotenv.config();
+dns.setServers(['8.8.8.8', '8.8.4.4']); 
 
 
 // port config to the server 

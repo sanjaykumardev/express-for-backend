@@ -35,7 +35,8 @@ const Register = () => {
         console.log('Email:', email);
         console.log('Password:', password);
         console.log(res);
-
+        console.log(usertype);
+        
         setUsername('');
         setEmail('');
         setPassword('');
