@@ -18,6 +18,7 @@ const registerUser =  asyncHandler(async(req,res) =>{
     console.log(res,"email is already there");
   }
   // hashing the password in resgister
+  
   const hashingPassword = await bcrypt.hash(password ,10);
   console.log("hashingpwassord :",hashingPassword);
   const user = await User.create({
@@ -57,7 +58,7 @@ const loginUser =  asyncHandler(async(req,res) =>{
       },
     },
     // this to token to user to have when they login expiresIn:"1m" // 
-    process.env.ACCESS_TOKEN_SECRET,{expiresIn:"1m"}
+    process.env.ACCESS_TOKEN_SECRET,{expiresIn:"1h"}
     
     ); 
     

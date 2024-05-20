@@ -19,7 +19,7 @@ const Userdata = mongoose.Schema({
     required: true
   }
 }, {
-  timestamps: true // Corrected from 'timestampe' to 'timestamps'
+  timestamps: true 
 });
 
 module.exports = mongoose.model("User", Userdata);

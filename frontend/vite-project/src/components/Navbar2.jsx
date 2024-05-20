@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 
 const Navbar = () => {
@@ -14,8 +14,9 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4 shadow-lg">
       <div className="container mx-auto md:mt-2 md:mb-2 flex justify-between items-center">
+      <img src="" />
         <Link to="/" className="text-white text-3xl font-bold">
-          COVID-19
+          H-Care
         </Link>
 
         <div className="hidden md:flex space-x-12 ml-20">

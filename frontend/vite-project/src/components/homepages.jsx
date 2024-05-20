@@ -24,7 +24,7 @@ const homepages = () => {
           </div>
           <div className="md:w-1/2 ml-15 ">
             <h2 className="p-5  md:text-7xl text-3xl md:mr-10 md:mt-10  text-center md:text-center ">
-              Find a COVID-19 Vaccine Near You
+              Find a H-Care Near You
             </h2>
             <p className="mb-5 md:text-3xl md:mb-6  md:mt-4 md:p-3  text-center space-x-2">In light of the ongoing COVID-19 pandemic, it is crucial to stay informed about the latest updates and guidelines provided by health authorities.  Stay vigilant, practice preventive measures, and prioritize the health and well-being of yourself and your community. we can contribute to a safer and healthier environment
               Stay vigilant, practice preventive measures, and prioritize the health and well-being of yourself and your community. we can contribute to a safer and healthier environment.</p>
@@ -38,7 +38,7 @@ const homepages = () => {
             <h1 className="font-bold text-blue-900 text-3xl  md:mb-5 ">Updated COVID-19 vaccines are now available for children and adults</h1>
             <p className="text-2xl md:mr-1 mb-2">
               <li>
-                Availability will continue to increase, so if you don't find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.
+                Availability will continue to increase, so if you do not find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.
               </li>
 
             </p>
@@ -57,7 +57,7 @@ const homepages = () => {
                 Infants and older adults are more likely to develop severe RSV and need hospitalization. Vaccines are available to protect older adults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV. Talk to your health care provider for information about RSV vaccination and monoclonal antibody products. Learn more about RSV and RSV prevention.
               </li>
               <li>
-                If you have health insurance but it doesn't fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.
+                If you have health insurance but it Does not  fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.
               </li>
             </p>
             <h1 className="font-bold text-blue-900 md:text-3xl md:mt-0 md:mb-2">Search for Flu Vaccine Locations</h1>

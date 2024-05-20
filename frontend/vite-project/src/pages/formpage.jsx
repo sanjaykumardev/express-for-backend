@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect  } from 'react';
 import Axios from 'axios';
 import { useNavigate } from 'react-router-dom'

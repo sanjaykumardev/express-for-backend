@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
 <div className="   mt-8 w-full  bg-gray-800 px-8 md:px-[500px]  md:flex-row  flex-col flex  space-y-0 items-start justify-between sm:text-sm md:text-md py-10 md:text-1xl sm:space-x-0 gap-4">
 
 <div className=" flex flex-col  text-m gap-2 text-white">
-<h2> </h2>  
+<h2 className="text-2xl mb-2">Contact</h2>  
 <p>Fearture vaccnation Details</p>
 <p>Most Viewed</p>
 <p>Readers Choice</p>
@@ -19,7 +19,7 @@ function Footer() {
 {/* middle */}
 
 <div className=" flex flex-col  text-m gap-2 text-white ">
-  <h2> </h2>
+  <h2 className="text-2xl mb-2">Services</h2>
 <p>Forum</p>
 <p>Support</p>
 <p>Recent Posts</p>
@@ -31,7 +31,7 @@ function Footer() {
 </div>
 
 <div className=" flex flex-col text-m gap-2 text-white">
-  <h2 className="text-2xl">
+  <h2 className="text-2xl mb-2">
   Support
   </h2>
 <p>Privacy Policy</p>
@@ -40,7 +40,7 @@ function Footer() {
 <p>Terms of Service</p>
 </div>
 </div>
-<p className="py-2 pb-2 h-full text-center text-white bg-gray-800">All right reseved @COVID-19 Vaccination 2024</p>
+<p className="py-2 pb-2 h-full text-center text-white bg-gray-800">All right reseved @H-Care Center 2024</p>
 </>
   )
 }
