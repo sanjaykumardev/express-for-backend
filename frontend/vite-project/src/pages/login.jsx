@@ -44,7 +44,7 @@ function login() {
     <>
       <Navbar2 />
       <div>
-        <img className="  md:h-[45vh]   shadow-black  w-full mt-5 object-cover md:mt-10" src="https://images.pexels.com/photos/15414031/pexels-photo-15414031/free-photo-of-rapeseed-field-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <img className="  md:h-[45vh]   shadow-black  w-full mt-5 object-cover md:mt-10" src="" />
       </div>
 
       <div className='w-full flex justify-center items-center  h-[80vh]'>
