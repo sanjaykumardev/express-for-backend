@@ -38,7 +38,7 @@ const homepages = () => {
             <h1 className="font-bold text-blue-900 text-3xl  md:mb-5 ">Updated COVID-19 vaccines are now available for children and adults</h1>
             <p className="text-2xl md:mr-1 mb-2">
               <li>
-                Availability will continue to increase, so if you don't find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.
+                Availability will continue to increase, so if you do not find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.
               </li>
 
             </p>
@@ -57,7 +57,7 @@ const homepages = () => {
                 Infants and older adults are more likely to develop severe RSV and need hospitalization. Vaccines are available to protect older adults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV. Talk to your health care provider for information about RSV vaccination and monoclonal antibody products. Learn more about RSV and RSV prevention.
               </li>
               <li>
-                If you have health insurance but it doesn't fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.
+                If you have health insurance but it does not fully cover COVID-19 vaccines, you can find locations that provide free vaccines for adults by narrowing your search to find locations that are part of the Bridge Access Program. Check with your location or insurer to confirm that the location is in network.
               </li>
             </p>
             <h1 className="font-bold text-blue-900 md:text-3xl md:mt-0 md:mb-2">Search for Flu Vaccine Locations</h1>

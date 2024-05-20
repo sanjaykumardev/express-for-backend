@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 
 
 function Footer() {
@@ -40,7 +40,7 @@ function Footer() {
 <p>Terms of Service</p>
 </div>
 </div>
-<p className="py-2 pb-2 h-full text-center text-white bg-gray-800">All right reseved @COVID-19 Vaccination 2024</p>
+<p className="py-2 pb-2 h-full text-center text-white bg-gray-800">All right reseved @H-Care Center 2024</p>
 </>
   )
 }
