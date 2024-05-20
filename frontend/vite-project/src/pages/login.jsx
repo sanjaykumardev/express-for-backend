@@ -46,6 +46,7 @@ function login() {
       <div>
         <img className="  md:h-[45vh]   shadow-black  w-full mt-5 object-cover md:mt-10" src="" />
       </div>
+      
 
       <div className='w-full flex justify-center items-center  h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[80%] md:w-[25%] '>
