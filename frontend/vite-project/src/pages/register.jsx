@@ -29,7 +29,6 @@ const Register = () => {
           email,
           password,
           usertype,
-
         });
         console.log('Username:', username);
         console.log('Email:', email);
@@ -41,7 +40,7 @@ const Register = () => {
         setEmail('');
         setPassword('');
         setError(false);
-        navigator('/login');
+        navigator('/');
       } catch (err) {
         setError(true);
         console.log(err);
@@ -53,11 +52,12 @@ const Register = () => {
     <div>
       <Navbar2 />
       <div>
-        <img className="  md:h-[45vh]   shadow-black  w-full mt-5 object-cover md:mt-10" src="https://images.pexels.com/photos/15414031/pexels-photo-15414031/free-photo-of-rapeseed-field-in-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <img className="  md:h-[50vh]   shadow-black  w-full  object-cover " 
+        src="https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?t=st=1716212009~exp=1716215609~hmac=a1340576b39527c2c797176504ee442121e628979a60785249f11e9ad42e6244&w=1380" />
       </div>
       <div className="flex items-center justify-center md:mb-0 h-[80vh] w-full rounded z-index ">
         <div className='flex items-center justify-center flex-col space-y-4 md:w-95 w-80 '>
-          <form action="post" onSubmit={(e) => RegisterSubmit(e)}>
+          <form action="post" onSubmit={RegisterSubmit}>
             <div className='mt-2 mb-2  '>
               <h1 className='md:text-2xl textlg font-bold text-center'>Create An Account</h1>
 
@@ -115,7 +115,7 @@ const Register = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <button className="bg-indigo-500 shadow-lg md:w-80% p-3 w-80 shadow-indigo-500/50 text-white px-4 py-2 rounded hover:bg-gray-200  mb-3" onClick={RegisterSubmit}>Register</button>
+              <button className="bg-indigo-500 shadow-lg md:w-80% p-3 w-80 shadow-indigo-500/50 text-white px-4 py-2 rounded hover:bg-gray-200  mb-3" >Register</button>
               {error ? <h3 className='text-green-700 '>something wrong </h3> :
                 <p ><span className="font-bold mt-4">Already have an Account?</span>  <span className='text-gray-700 pl-2'>Login</span> </p>}
             </div>

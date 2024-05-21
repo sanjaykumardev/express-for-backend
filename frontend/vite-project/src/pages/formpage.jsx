@@ -6,13 +6,10 @@ import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer';
 import {Link} from "react-router-dom"
 import Navbar2 from "../components/Navbar2"
+import Adminpage from './Adminpage'
 
 const formPage = () => {
 
-  // const navigate = useNavigate(); 
-
-  // const [authToken, setAuthToken] = useState('');
-  // const [isAuthenticated, setIsAuthenticated] = useState(true);
   const isProductAvailable = true;
   const [error , setError] = useState(false);
   const [name, setName] = useState('');
@@ -27,37 +24,12 @@ const formPage = () => {
   const [slot, setSlot] = useState('2022-01-17');
 
 
-
-
-
- 
-  // const logout = async () => {
-  //   try {
-  //     const res = await Axios.delete("http://localhost:3000/api/users/logout", {
-  //       headers: {
-  //         Authorization: `Bearer ${authToken}`,
-  //       },
-  //     });
-
-  //     if (res.status === 200) {
-  //       console.log('Logout successful');
-  //       setIsAuthenticated(false);
-  //       setAuthToken('');
-  //       localStorage.removeItem('token'); // Remove token from local storage
-  //       navigate('/login');
-  //     } else {
-  //       console.log('Logout failed');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during logout:', error);
-  //   }
-  // };
-
   // COVID-19 details
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    
     try{
-      const res = await Axios.post("http://localhost:3000/api/contacts/userdetails",{
+      const res = await Axios.post("http://localhost:5000/api/contacts/userdetails",{
         name,
         age,
         Aadhaar,
@@ -98,7 +70,7 @@ const formPage = () => {
       <h2 className="p-1 text-center z-index shadow-black bg-blue-100 text-s md:text-lg text-black-200">  Need help finding a COVID‑19 vaccine in the U.S.? Call <span className="text-blue-500">1-800-232-0233 (TTY 1-888-720-7489)</span></h2>
 
         <div className="bg-blue-500 ">
-          <h2 className="text-3xl  font-bold mb-20  bg-black w-full p-3 text-white text-center">Personal Information</h2>
+          <h2 className="text-3xl  font-bold mb-20  w-full p-3 text-white text-center">Personal Information</h2>
           <form className=" mb-2" onSubmit={handleFormSubmit}>
 
             <div className='md:flex md:w-[1/2]  md:mr-20  md:justify-center md:space-x-10 mt-4 '>
@@ -178,7 +150,7 @@ const formPage = () => {
             <div className='md:w-80 md:space-x-20 md:mt-1 '>
             <h3 className='md:text-center md:ml-8 md:mr-40 '>Time</h3>
             <input
-              type="time"
+              type=""
               placeholder="Time"
               value={time}
               className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-xl  placeholder-gray-400 focus:outline-none md:mb-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -186,7 +158,7 @@ const formPage = () => {
             />
              <h3>Date</h3>
             <input
-              type="date"
+              type=""
               placeholder="Slot"
               value={slot}
               className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-lg placeholder-gray-400 focus:outline-none md:mb-3  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -207,15 +179,15 @@ const formPage = () => {
            {error && <h3 className='text-red-500  ml-20'>something went wrong</h3>}  
            </div>
            <div>
-          <h2 className='mt-10 w-full  text-lg text-center bg-black p-5 text-white'>
-              Map for loaction
+          <h2 className='mt-10   text-2xl font-bold text-center p-5 text-black'>
+              Map For Loaction
             </h2>
           </div>
-          <div className='bg-white md:flex  ' >
+          <div className='bg-white  md:flex md:px[300px] ' >
           
           <img className="  mt-2 md:ml-4 md:w-full  md:h-500  object-cover" src="https://imgs.search.brave.com/qx7Y3H0i0-k3ppbBoGw3s-a06ZRgI3vr6gtEi9GdjpM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bnljLmdvdi9hc3Nl/dHMvaG9tZS9pbWFn/ZXMvcmVzb3VyY2Vz/L255Y21hcHMvQ3Jp/bWUtTWFwLmpwZw"></img>
           <div className='justify-center md:mr-10 md:ml-10  ' >
-            <h1 className=' ml-2 md:text-center font-bold text-center mt-3 text-blue-500 text-4xl' >COVID-19</h1>
+            <h1 className=' ml-2 md:text-center font-bold text-center mt-3 text-blue-500 text-4xl' >  H-Care Center</h1>
             <div className='text-lg mt-5' >
             <p > Availability will continue to increase, so if you do not find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.</p>
             <p>Availability will continue to increase, so if you do not find vaccines near you, contact your local pharmacy or health care provider, or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.</p>
@@ -227,7 +199,7 @@ const formPage = () => {
             <p>Availability will continue to increase, so if you do not find vaccines near you, contact your local pharmacy or check back later. Once you find a location that works for you, please confirm vaccine availability through their site.
             </p>
             <div>
-            <button className=' md:ml-40 md:mt-20 text-m bg-blue-400 md:text-lg shadow-lg md:w-80% p-3 w-30 rounded shadow-blue-500/50   mt-10  py-4 px-40  text-white '>Search for the COVID-19 Vaccine</button>
+            <button className=' md:ml-40 md:mt-20 text-m bg-blue-400 md:text-lg shadow-lg md:w-80% p-3 w-30 rounded shadow-blue-500/50   mt-10  py-4 px-40  text-white '>Search for the Vaccine and H-Care Center</button>
             </div>
            
             </div>
@@ -236,7 +208,7 @@ const formPage = () => {
           </div>
           </form>
           {/* // work need to done here */}
-         
+       
         </div>
       </div>
       <Footer />

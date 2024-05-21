@@ -12,14 +12,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 shadow-lg">
-      <div className="container mx-auto md:mt-2 md:mb-2 flex justify-between items-center">
-        <Link to="/" className="text-white text-3xl font-bold">
-          COVID-19
+    <nav className="bg-gray-800  p-4 h-[12vh] shadow-lg">
+      <div className="container  mx-auto md:mt-6 md:mb-2 flex justify-between items-center">
+     
+        <Link to="/home" className="text-white text-3xl font-bold">
+          H-Care Center
         </Link>
 
-        <div className="hidden md:flex space-x-12 ml-20">
-          <Link to="/" className="text-white">
+        <div className="hidden md:flex space-x-12 ml-20 ">
+          <Link to="/home" className="text-white">
             Home
           </Link>
           <Link to="/about" className="text-white">
@@ -40,7 +41,7 @@ const Navbar = () => {
            <Link to='/'></Link> </button>
           ) : (
             <>
-              <Link to="/login">
+              <Link to="/">
                 <button className="bg-blue-500 shadow-lg shadow-blue-500/50 ml-10 text-white px-4 py-2 rounded">
                   Login
                 </button>

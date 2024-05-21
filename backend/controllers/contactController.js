@@ -32,20 +32,20 @@ const getContact =  asyncHandler(async(req,res) =>{    // it all contact of data
 
 // get by id contact 
    const getContacts = asyncHandler(async(req,res) =>{   // it is id to contact
-   const user = await Contact.findById(req.params.id); // missing the error code to update late 
+   const user = await Contact.findById(req.body.id); // missing the error code to update late 
    res.status(200).json(user);
 });
 
 // update by id 
   const updateContact =  asyncHandler(async(req,res) =>{
-  const user = await Contact.findById(req.params.id)
+  const user = await Contact.findById(req.body.id)
   if(!user){
    res.status(404);
    console.log(res)
   }
 // update the data 
   const updatecontact = await Contact.findByIdAndUpdate(
-    req.params.id,
+    req.body.id,
     req.body,
     {new : true}
   );

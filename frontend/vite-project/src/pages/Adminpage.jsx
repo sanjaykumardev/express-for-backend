@@ -1,10 +1,14 @@
 // import React from 'react'
+import Footer from '../components/Footer';
+import Navbar2 from '../components/Navbar2';
 
 const Adminpage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Navbar2/>
+
+     <Footer/> 
+    </>
   )
 }
 

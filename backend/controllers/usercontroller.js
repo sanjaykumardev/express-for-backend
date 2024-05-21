@@ -57,7 +57,7 @@ const loginUser =  asyncHandler(async(req,res) =>{
       },
     },
     // this to token to user to have when they login expiresIn:"1m" // 
-    process.env.ACCESS_TOKEN_SECRET,{expiresIn:"1m"}
+    process.env.ACCESS_TOKEN_SECRET,{expiresIn:"1h"}
     
     ); 
     

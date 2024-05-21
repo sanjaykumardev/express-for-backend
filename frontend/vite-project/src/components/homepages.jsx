@@ -1,8 +1,7 @@
 import Footer from "../components/Footer"
 import Navbar2 from "../components/Navbar2"
-// import React from 'react'
 import { Link } from 'react-router-dom'
-// import { IoCallSharp } from "react-icons/io5";
+
 
 
 
@@ -23,10 +22,11 @@ const homepages = () => {
             </div>
           </div>
           <div className="md:w-1/2 ml-15 ">
+          
             <h2 className="p-5  md:text-7xl text-3xl md:mr-10 md:mt-10  text-center md:text-center ">
               Find a COVID-19 Vaccine Near You
             </h2>
-            <p className="mb-5 md:text-3xl md:mb-6  md:mt-4 md:p-3  text-center space-x-2">In light of the ongoing COVID-19 pandemic, it is crucial to stay informed about the latest updates and guidelines provided by health authorities.  Stay vigilant, practice preventive measures, and prioritize the health and well-being of yourself and your community. we can contribute to a safer and healthier environment
+            <p className="mb-5 md:text-3xl md:mb-6  md:mt-34 md:p-3  text-center space-x-2">In light of the ongoing COVID-19 pandemic, it is crucial to stay informed about the latest updates and guidelines provided by health authorities.  Stay vigilant, practice preventive measures, and prioritize the health and well-being of yourself and your community. we can contribute to a safer and healthier environment
               Stay vigilant, practice preventive measures, and prioritize the health and well-being of yourself and your community. we can contribute to a safer and healthier environment.</p>
             <button className=" bg-pink-600 shadow-lg hover:bg-pink-400 hover:text-black hover:font-bold shadow-indigo-500/50 text-white md:mt-10 py-2 rounded mb-5 md:mb-5 md:py-5 px-40 md:px-40 ml-10 mt-2 md:ml-60 ml-50 justify-normal"><Link to="/formpage">Apply Form</Link></button>
           </div>
@@ -77,7 +77,7 @@ const homepages = () => {
 
         {/* // photo to COVID-19 */}
 
-        <div className=" md:w-full md:h-[80vh] text-lg   md:px-[200px] flex-shrink shadow-lg  flex md:flex mt-4 bg-blue-500">
+        <div className=" md:w-full md:h-[80vh] text-lg   md:px-[300px] flex-shrink shadow-lg  flex md:flex mt-4 bg-blue-500">
 
           <div className=" md:flex  md:justify-center md:items-center md:ml-0  md:space-x-44 md:mt-4  ">
             <div className="  mb-5 px-5 shadow-black" >
@@ -104,21 +104,21 @@ const homepages = () => {
         </div>
         {/* contact */}
 
-        <div className="bg-blue-200 mt-2  md:px-[300px] ">
-          <h2 className="text-4xl font-bold md:mt-5   md:mb-20 mb-20 text-center text-black-500 ">CONTACT INFO</h2>
-          <div className=" ">
+        <div className="bg-blue-200   md:px-[300px] ">
+          <h2 className="text-4xl font-bold md:mt-5   md:mb-30 mb-20 text-center text-black ">CONTACT INFO</h2>
+          <div className="">
 
             <div className="flex flex-col md:flex-row  justify-center items-center">
               <div className="md:w-1/2  ">
                 <h3 className="text-3xl font-semibold mb-10 text-start ">COVID‑19 Vaccine Hotline</h3>
-                <h1 className="text-2xl mt-5 mb-10  text-start">Help is available in English, Spanish and also many</h1>
+                <h1 className="text-2xl mt-5 mb-20  text-start">Help is available in English, Spanish and also many</h1>
                 <p className="text-blue-700 mb-10 text-2xl text-start">123 Main Street</p>
                 <p className="text-blue-700 mb-10 text-2xl text-start">City, Country</p>
               </div>
 
-              <div className="md:w-1/2  ">
+              <div className="md:w-1/2 ">
                 <h3 className="text-3xl font-semibold mb-10  text-start">Disability Information and Access Line (DIAL)</h3>
-                <h1 className="text-2xl mt-5 mb-10  text-start">COVID‑19 vaccination support for people with disabilities.</h1>
+                <h1 className="text-2xl mt-5 mb-20  text-start">COVID‑19 vaccination support for people with disabilities.</h1>
                 <p className="text-blue-700 mb-10 text-2xl text-start">+1 (123) 456-7890</p>
                 <p className="text-blue-700  mb-10 text-2xl text-start">DIAL@n4a.org</p>
               </div>
@@ -133,11 +133,11 @@ const homepages = () => {
           <div className=" md:flex space-x-4 md:mt40">
 
             <div>
-              <img className="  md:h-[69vh] md:ml-40 p-2 mb-3 md:mb-10 mr-5 shadow-lg  md:mr-28 mt-5 object-fit " src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <img className="  md:h-[59vh] md:ml-20 p-2 mb-3 md:mb-10 mr-5 shadow-lg  md:mr-28 mt-5 object-fit " src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
             </div>
-            <div className="md:w-1/4 w-20px h-[70vh] ml-0  shadow-lg md:h-[72vh] md:mt-8    bg-white ">
-              <h1 className="text-lg font-bold text-center  mt-2">MEDICAL EQUPIMENT</h1>
-              <div className="p-3 text-sm space-y-2">
+            <div className="md:w-[40%] w-30px h-[70vh]   shadow-lg md:h-[62vh] md:mt-8    bg-white ">
+              <h1 className="text-xl font-bold text-center  mt-2">MEDICAL EQUPIMENT</h1>
+              <div className="p-3 text-xl mt-2 space-y-2">
                 <li>
                   Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
                 </li>
@@ -162,14 +162,12 @@ const homepages = () => {
                 <li>
                   Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
                 </li>
-                <button className="bg-black text-lg ml-28 text-white rounded shadow-lg font-bold md:bg-blue-500 p-5 px-20 md:p-5 md:ml-6 md:px-40  ">
+                <button className="bg-black text-lg  text-white rounded shadow-lg font-bold md:bg-blue-500 p-5 px-20 md:p-5 md:ml-60 md:px-40  ">
                   See List
                 </button>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
       <Footer />
@@ -180,44 +178,3 @@ const homepages = () => {
 export default homepages
 
 
-{/* <div className="md:w-200px md:ml-80 md:mr-80 mt-4 stritch md:h-[400px] h-100px md:flex md:justify-center md:items-center   ">
-        
-{/* <img className=" md:w-250px  w-250px h-500px md:h-[100%] object-cover" src="https://imgs.search.brave.com/r0jWbFtUtx-azgHd8lhdtO0ulKMoEtVrcLV9fEnyo7Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YW5kcmVhc29sbGVu/YmVyZ2VyLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMC8w/NC9Nb20tRGFkLWFu/ZC1naXJscy1sb3Zl/LWJpZy1mYW1pbHkt/aHVnLTEwMjR4Njgz/LmpwZw"></img>
- */}
-//  </div>    */}
-// <div className="w-300px md:w-500px  flex md:space-x-0 space-x-2 flex-shrink" > </div>  
-// <span className="text-lg   font-bold text-red-600">*</span>
-
-
-
-{/* <div className="    ">
-<h1 className="md:text-5xl ml-2 text-3xl text-center  mt-2 md:mt-5 text-blue-500  border-b-4 border-red-500 inline ">CONTACT</h1>
-</div> 
-{/* right */}
-{/* <div  className="md:flex-col ">
-<div className="text-3xl  border-red-500 inline  text-black-500  border-b-2">  
-      <h2>Get Help</h2>
-  </div>
- 
-</div>
-
-{/* //left */}
-{/* <div className="">
-<div className="">
-    <h1>Disability Information and Access Line (DIAL)</h1>
-    <p>COVID‑19 vaccination support for people with disabilities.</p>
-  </div>
-</div>  */}
-
-{/* <div className="md:w-full flex md:px-[400px] shadow-black">
-<div className="flex flex-wrap">
- <div className="w-1/2 p-4">
- <h1 className="md:text-5xl ml-2 text-3xl text-center  mt-2 md:mt-5 text-blue-500  border-b-4 border-red-500 inline ">CONTACT</h1>
- </div>
- <div className="w-1/2 p-4">Item 2</div>
- <div className="w-1/2 p-4">Item 3</div>
- <div className="w-1/2 p-4">Item 4</div>
-</div>
-
- 
-</div> */}
