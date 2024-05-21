@@ -20,9 +20,9 @@ const formPage = () => {
   const [city, setCity] = useState('');
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
-  const [time, setTime] = useState('12:00');
-  const [slot, setSlot] = useState('2022-01-17');
-
+  const [time, setTime] = useState('');
+  const [slot, setSlot] = useState('');
+  const [formData , setFormData] = useState();
 
   // COVID-19 details
   const handleFormSubmit = async (e) => {
@@ -57,6 +57,12 @@ const formPage = () => {
       setError(true)
       console.log(err)
     }
+  };
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (

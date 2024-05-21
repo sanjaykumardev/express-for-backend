@@ -77,7 +77,7 @@ const homepages = () => {
 
         {/* // photo to COVID-19 */}
 
-        <div className=" md:w-full md:h-[80vh] text-lg   md:px-[300px] flex-shrink shadow-lg  flex md:flex mt-4 bg-blue-500">
+        <div className=" md:w-full md:h-[80vh] text-lg   md:px-[300px] flex-shrink shadow-lg  flex md:flex mt-4 ">
 
           <div className=" md:flex  md:justify-center md:items-center md:ml-0  md:space-x-44 md:mt-4  ">
             <div className="  mb-5 px-5 shadow-black" >
@@ -135,9 +135,9 @@ const homepages = () => {
             <div>
               <img className="  md:h-[59vh] md:ml-20 p-2 mb-3 md:mb-10 mr-5 shadow-lg  md:mr-28 mt-5 object-fit " src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
             </div>
-            <div className="md:w-[40%] w-30px h-[70vh]   shadow-lg md:h-[62vh] md:mt-8    bg-white ">
+            <div className="md:w-[40%] w-30px h-[80vh]   shadow-lg md:h-[62vh] md:mt-8    bg-white ">
               <h1 className="text-xl font-bold text-center  mt-2">MEDICAL EQUPIMENT</h1>
-              <div className="p-3 text-xl mt-2 space-y-2">
+              <div className="p-3  mt-2 space-y-2">
                 <li>
                   Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
                 </li>

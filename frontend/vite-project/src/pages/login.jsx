@@ -44,12 +44,12 @@ function login() {
     <>
       <Navbar2 />
       <div>
-        <img className="  md:h-[50vh]   shadow-black  w-full  object-cover " src="https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?t=st=1716212009~exp=1716215609~hmac=a1340576b39527c2c797176504ee442121e628979a60785249f11e9ad42e6244&w=1380" />
+        <img className="  md:h-[50vh]   shadow-black  w-full  object-scale-up object-cover " src="https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg?t=st=1716212009~exp=1716215609~hmac=a1340576b39527c2c797176504ee442121e628979a60785249f11e9ad42e6244&w=1380" />
       </div>
       <div className='w-full flex justify-center items-center h-[60vh]'>
         <div className='flex flex-coljustify-center items-center rounder-lg space-y-2 w-[80%] md:w-[25%] '>
           <div className='md:mr-20'>
-            <h1 className=" font-bold md:ml-40  mt-7 mb-4 md:mb-7 text-2xl text-center md:text-3xl gap-3">Login To Account </h1>
+            <h1 className=" font-bold md:ml-40  mt-7 mb-4 md:mb-7 text-2xl text-center md:text-1xl gap-3">Login To Account </h1>
             <form className=' ml-5 md:mr-5' onSubmit={(e) => handleSubmit(e)}>
 
 
