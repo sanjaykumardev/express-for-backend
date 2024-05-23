@@ -22,12 +22,11 @@ const formPage = () => {
   const [address, setAddress] = useState('');
   const [time, setTime] = useState('');
   const [slot, setSlot] = useState('');
-  const [formData , setFormData] = useState();
+
 
   // COVID-19 details
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    
     try{
       const res = await Axios.post("http://localhost:5000/api/contacts/userdetails",{
         name,
@@ -59,11 +58,19 @@ const formPage = () => {
     }
   };
 
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const [formData, setFormData] = useState({
+       name:"",
+        age:"",
+        Aadhaar:"",
+        state:"",
+        country:"",
+        city:"",
+        email:"",
+        address:"",
+        time:"",
+        slot:"" 
+  });
+  
 
   return (
    
@@ -214,7 +221,7 @@ const formPage = () => {
           </div>
           </form>
           {/* // work need to done here */}
-       
+          <Adminpage formData={formData} />
         </div>
       </div>
       <Footer />

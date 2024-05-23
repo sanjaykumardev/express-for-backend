@@ -25,7 +25,7 @@ const createContact =   asyncHandler (async(req,res) =>{
 });
 
 // get all contacts
-const getContact =  asyncHandler(async(req,res) =>{    // it all contact of data 
+ const getContact =  asyncHandler(async(req,res) =>{    // it all contact of data 
  const user =  await Contact.find()
   res.status(200).json(user);
 });

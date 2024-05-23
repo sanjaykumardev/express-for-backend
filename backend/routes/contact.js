@@ -5,7 +5,7 @@ const {createContact,getContact,updateContact,getContacts,deleteContact} = requi
 
 router.post('/userdetails' , createContact);
 
-router.get('/' ,getContact);
+router.get('/getuser' ,getContact);
 
 router.get('/:id' ,getContacts);
 

@@ -11,7 +11,7 @@ function Adminpage() {
   useEffect(() => {
     async function fetchUserDetails() {
       try {
-        const response = await Axios.get("http://localhost:5000/api/contacts/userdetails/${username");
+        const response = await Axios.get("http://localhost:5000/api/contacts/getuser");
         setUserDetails(response.data);
       } catch (error) {
         console.error('Error fetching user details:', error);

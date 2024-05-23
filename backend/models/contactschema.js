@@ -4,44 +4,44 @@ const mongoose = require("mongoose");
 const contactSchema = mongoose.Schema({
   name:{
     type:String,
-    required:[true ,"please add the conact name "],
+    required:[true],
   },
   email:{
     type: String,
-    required:[true , "please add the email"],
+    required:[true],
   },
  
   age:{
     type: String,
-    required:[true, "please add the number"],
+    required:[true],
   },
   Aadhaar:{
     type: String,
-    required:[true, "please add the country"],
+    required:[true],
   },
   state:{
     type: String,
-    required:[true, "please add the state"],
+    required:[true],
   },
   city:{
     type: String,
-    required:[true, "please add the city"],
+    required:[true],
   },
   address:{
     type:String,
-    required:[true, "please add the address"],
+    required:[true],
   },
   country:{
     type:String,
-    required:[true, "please add the country"],
+    required:[true],
   },
   slot:{
     type:String,
-    required:[true, "please add the slot"],
+    required:[true],
   },
   time:{
     type:String,
-    required:[true, "please add the Time"],
+    required:[true],
   },
  },
   { 
