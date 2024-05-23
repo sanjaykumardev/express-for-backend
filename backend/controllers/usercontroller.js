@@ -2,14 +2,19 @@ const asyncHandler = require("express-async-handler");
 const User = require("../models/userschema"); // USERSCHEMA DATA 
 const bcrypt = require("bcrypt"); // HASHPASSWORD PACKAGE LB
 const jwt = require("jsonwebtoken");
+const userschema = require("../models/userschema");
 
 
 // register client 
 const registerUser =  asyncHandler(async(req,res) =>{   
-  const {username ,email, password,usertype} = req.body;
+  const {username ,email, password, usertype, secretkey} = req.body;
   if(!username || !email || !password || !usertype){
     res.status(400);
     console.log(res);
+  }
+
+  if (usertype === "Admin" && !secretkey) {
+    return res.status(400).json({ message: "Secret key is required for admin registration" });
   }
   // if user already means then it will execute this code 
   const userAvaliable = await User.findOne({email});
@@ -24,50 +29,46 @@ const registerUser =  asyncHandler(async(req,res) =>{
     username,
     email,
     password : hashingPassword,
-    usertype
+    usertype,
+    secretkey
   });
   console.log(`user is created ${user}`);
   // to send a msg to user that they are registered it 
   if(!user){
-    res.status(201).json({id: User.id, email: User.email})
-  }else{
-    res.status(400)
-    console.log(res)
+    return res.status(500).json({ message: "User registration failed" });
   }
-    res.json(user);
+  res.status(201).json({ id: user.id, email: user.email });
 });
 
 const activeTokens = new Set();
 
 // login client
-const loginUser =  asyncHandler(async(req,res) =>{   
-  const {email ,password} = req.body;
-  if(!email || !password){
-    res.status(400);
-    throw new Error("All  field are required");
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, password, usertype } = req.body;
+  if (!email || !password || !usertype) {
+    return res.status(400).json({ message: "All fields are required" });
   }
-  const user = await User.findOne({email});
-  // comparenthe password to hashpassword
-  if(user && (await bcrypt.compare(password, user.password))){
-    const accessToken = jwt.sign({ // jwt token 
-      user:{
-        username: User.username,
-        email:User.email,
-        id: User.id,
+
+  const user = await User.findOne({ email });
+  if (!user || !(await bcrypt.compare(password, user.password))) {
+    return res.status(401).json({ message: "Invalid email or password" });
+  }
+
+  const accessToken = jwt.sign(
+    {
+      user: {
+        username: user.username,
+        email: user.email,
+        id: user.id,
+        usertype: user.usertype,
       },
     },
-    // this to token to user to have when they login expiresIn:"1m" // 
-    process.env.ACCESS_TOKEN_SECRET,{expiresIn:"1h"}
-    
-    ); 
-    
-    res.status(200).json({accessToken});
-  } else{
-    res.status(401);
-    throw new Error("email and password is not valid ")
-  }
-  // res.json({message:"register the user"});
-  });
+    process.env.ACCESS_TOKEN_SECRET,
+    { expiresIn: "1h" }
+  );
+
+  res.status(200).json({ accessToken });
+});
 
   
 const logout = asyncHandler(async(req,res) =>{

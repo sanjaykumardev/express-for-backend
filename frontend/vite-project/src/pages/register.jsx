@@ -15,42 +15,37 @@ const Register = () => {
   const [error, setError] = useState(false);
   const navigator = useNavigate();
   const [usertype, setUsertype] = useState('');
-  const [Secretkey, useSecretkey] = useState('');
+  const [secretkey, setSecretKey] = useState('');
 
-
-
-
-  const URL = "http://localhost:5000/api/users";
-
-  async function RegisterSubmit(e) {
+  async function registerSubmit(e) {
     e.preventDefault();
-    if (usertype === 'Admin' && Secretkey !== 'Admin007') {
-      toast.error("Invalid Admin");
-    } else {
-      try {
-        const res = await Axios.post(  URL + "/register", {
-          username,
-          email,
-          password,
-          usertype,
-        });
-        console.log('Username:', username);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log(res);
-        console.log(usertype);
-        localStorage.setItem('usertype', usertype);
-        navigator('/');
-        setUsername('');
-        setEmail('');
-        setPassword('');
-        setError(false);
-        toast.success("Registration Successful");
-      } catch (err) {
-        setError(true);
-        console.log(err);
-        toast.error("Registration Failed");
+    try {
+
+      if (usertype === 'Admin' && secretkey !== 'Admin007') {
+        toast.error("Invalid Admin");
+        return;
       }
+
+      const res = await Axios.post("http://localhost:5000/api/users/register", {
+        username,
+        email,
+        password,
+        usertype,
+        secretkey
+      });
+      console.log(res);
+      localStorage.setItem('usertype', usertype);
+      localStorage.setItem('secretkey', secretkey);
+      navigator('/');
+      setUsername('');
+      setEmail('');
+      setPassword('');
+      setError(false);
+      toast.success("Registration Successful");
+    } catch (err) {
+      setError(true);
+      console.log(err);
+      toast.error("Registration Failed");
     }
   }
 
@@ -63,7 +58,7 @@ const Register = () => {
       </div>
       <div className="flex items-center justify-center md:mb-0 h-[80vh] w-full rounded z-index ">
         <div className='flex items-center justify-center flex-col space-y-4 md:w-95 w-80'>
-          <form onSubmit={RegisterSubmit}>
+          <form onSubmit={registerSubmit}>
             <div className='mt-2 mb-2'>
               <h1 className='md:text-2xl textlg font-bold text-center'>Create An Account</h1>
 
@@ -87,10 +82,10 @@ const Register = () => {
                   <h3 className='mt-7 mb-3 ml-1 mr:10'>Secret key</h3>
                   <input
                     type="text"
-                    value={Secretkey}
+                    value={secretkey}
                     className='p-2 w-80 mb-5 border-2 border-black rounded-lg'
                     placeholder="key"
-                    onChange={(e) => useSecretkey(e.target.value)}
+                    onChange={(e) => setSecretKey(e.target.value)}
                   />
                 </div>
               )}

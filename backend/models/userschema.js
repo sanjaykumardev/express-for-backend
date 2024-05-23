@@ -17,9 +17,13 @@ const Userdata = mongoose.Schema({
   usertype: {
     type: String,
     required: true
+  },
+  secretkey:{
+    type: String,
+    required: true
   }
 }, {
-  timestamps: true // Corrected from 'timestampe' to 'timestamps'
+  timestamps: true 
 });
 
 module.exports = mongoose.model("User", Userdata);
